@@ -6,45 +6,13 @@ import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import store from './store';
 import { Provider } from 'react-redux';
-
+import Interactions from './screens/Interactions';
 const Stack = createNativeStackNavigator();
 export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalVisiblePass, setModalVisiblePass] = useState(false);
 
- 
-
   return (
-  //   <View style={styles.container}>
-  //    <Modal animationType="slide" visible={modalVisible} transparent>
-  //     <View style={styles.modalView} >
-  //       <View >
-  //         <Text style={styles.modalMessage}>Te ha gustado la foto</Text>
-  //         <View>
-  //           <Button
-  //             onPress={handleLike}
-  //             title="CONFIRMAR"
-  //           />
-  //         </View>
-  //       </View>
-  //     </View>
-  //   </Modal>
-  //   <Modal animationType="slide" visible={modalVisiblePass} transparent>
-  //     <View style={styles.modalView}>
-  //       <View >
-  //         <Text style={styles.modalMessage}>No te ha gustado la foto</Text>
-  //         <View >
-  //           <Button
-  //           style={styles.button}
-  //             onPress={handlePass}
-  //             title="CONFIRMAR"
-  //           />
-  //         </View>
-  //       </View>
-  //     </View> 
-  //   </Modal> 
-     
-  // </View>
   <Provider store= {store}>
   <NavigationContainer>
     <Stack.Navigator>
@@ -54,6 +22,7 @@ export default function App() {
         options={{ title: 'Welcome' }}
       />
       <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="Interactions" component={Interactions}/>
     </Stack.Navigator>
   </NavigationContainer>
   </Provider>
