@@ -1,9 +1,11 @@
-import React, { useState} from 'react'
+import React, { useReducer, useState} from 'react'
 import { StyleSheet, View, Image, Modal, Text, Button } from 'react-native'
 import Profile from './screens/Profile';
 import Home from './screens/Home';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import store from './store';
+import { Provider } from 'react-redux';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -43,6 +45,7 @@ export default function App() {
   //   </Modal> 
      
   // </View>
+  <Provider store= {store}>
   <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen
@@ -53,6 +56,7 @@ export default function App() {
       <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   </NavigationContainer>
+  </Provider>
   );
 }
 

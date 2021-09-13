@@ -1,7 +1,10 @@
 import React, { useState} from 'react'
 import {StyleSheet, View, Image,Button } from 'react-native'
+import { useSelector } from 'react-redux';
 
 const Home  = ({ navigation }) =>  {
+  const user = useSelector(state => state.user.name);
+
   function handlePass() {
     setModalVisiblePass(false);
     console.log('pass')
@@ -37,7 +40,7 @@ const Home  = ({ navigation }) =>  {
       <Button 
         title="Profile"
         onPress={() =>
-          navigation.navigate('Profile', { name: 'Jane' })
+          navigation.navigate('Profile', { name: user })
         }
       />
          <Button
