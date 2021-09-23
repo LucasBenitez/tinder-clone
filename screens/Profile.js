@@ -1,10 +1,10 @@
 import React, { useState} from 'react'
 import {View, Text, Button, StyleSheet } from 'react-native'
 
-const Profile = ({ navigation, route }) => {
+const Profile = ({ navigation }) => {
     return (
             <View style={styles.container}>
-             <Text>This is {route.params.name}'s profile</Text>
+             <Text>This is Jhon profile</Text>
             </View>
     );
   };

@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import {StyleSheet, View, Image,Button,Modal,Text } from 'react-native'
 import { useSelector } from 'react-redux';
-
+import TabNavigator from '../navigation/TabNavigator';
 const Home  = ({ navigation }) =>  {
   const user = useSelector(state => state.user.name);
   const [modalVisible, setModalVisible] = useState(false);
@@ -79,7 +79,6 @@ const Home  = ({ navigation }) =>  {
          </View>
        </View> 
      </Modal> 
-   
        </View>
        
       
