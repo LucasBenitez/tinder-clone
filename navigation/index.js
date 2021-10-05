@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { NavigationContainer } from "@react-navigation/native";
-import TabNavigator from './TabNavigator';
-
+//import TabNavigator from './TabNavigator';
+import UserNavigator from './UserNavigator';
 const MainNavigator = () => {
   return (
     <NavigationContainer>
-        <TabNavigator />
+        <UserNavigator />
     </NavigationContainer>
   );
 };
