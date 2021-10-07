@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { View, Text, Button, TextInput, ScrollView, StyleSheet } from 'react-native'
 import { insertUser } from '../db';
+import LocationPicker from '../components/LocationPicker';
 const NewUser = ({ navigation }) => {
     const dispatch = useDispatch();
     const [name, setName] = useState();
@@ -29,6 +30,7 @@ const NewUser = ({ navigation }) => {
                     value={email}
                     onChangeText={handleEmailChange}
                 />
+                <LocationPicker/>
                 <Button
                     title="Guardar usuario"
                     onPress={handleSave}
