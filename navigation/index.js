@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
-//import TabNavigator from './TabNavigator';
-import UserNavigator from './UserNavigator';
+import TopBar from './TopBar';
 const MainNavigator = () => {
   return (
     <NavigationContainer>
-        <UserNavigator />
+        <TopBar />
     </NavigationContainer>
   );
 };
